@@ -1,0 +1,10 @@
+- form_for @category do |t|
+    %p= t.label :name, "Nazwa kategorii"
+    %p= t.text_field :name
+    %p= t.label :description, "Opis kategorii"
+    %p= t.text_field :description
+    %p= t.submit "Dodaj!"
+
+%br
+%hr
+%p= link_to "Wróć do listy kategorii", categories_path

@@ -1,0 +1,12 @@
+%h2 Dodawanie artykułu
+
+- form_for [@article.category, @article] do |t|
+    %p= t.label :name, "Tytuł artykułu:"
+    %p= t.text_field :name
+    %p= t.label :content, "Treść artykułu:"
+    %p= t.text_area :content
+    %p= t.submit "Dodaj!"
+
+%br
+%hr
+%p= link_to "Wróć do listy kategorii", categories_path

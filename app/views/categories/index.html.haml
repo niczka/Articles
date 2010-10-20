@@ -1,0 +1,11 @@
+%h1 Dostępne kategorie
+
+- @categories.each do |category|
+  %p
+    %b= category.name
+  %p= category.description
+  = link_to "Więcej", category
+  %hr
+
+%br
+= link_to "Utwórz nową kategorię", new_category_path

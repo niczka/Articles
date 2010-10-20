@@ -1,0 +1,14 @@
+%h1 @category.name
+%p= @category.description
+
+%p= "Do kategorii należą:"
+
+- @category.articles.each do |article|
+  %h3 article.name
+  %p= article.content
+
+%p= link_to "Dodaj nowy artykuł", new_category_article_path(@category)
+
+%br
+%hr
+%p= link_to "Wróć do listy kategorii", categories_path
